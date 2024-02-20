@@ -51,9 +51,20 @@
 }
 
 .budget-container {
-    font-size: 60px;
+    font-size: 40px;
+    background-color: green;
 }
-
+.budget-container:hover {
+    font-size: 40px;
+    background-color: rgb(120, 103, 103);
+}
+.duration-wrapper {
+    background-color: rgb(8, 39, 235);
+}
+.location-wrapper {
+    
+    background-color: rgb(8, 39, 235);
+}
 
 .button-wrapper {
     margin-top: 10px;

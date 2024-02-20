@@ -7,7 +7,7 @@ const HeroContainer = () => {
     <section className="main-page-container">
       <div className='survey-container'>
         <h1>Survey</h1>
-        <form>
+        <form className='location-wrapper'>
       <label> Start Location: 
         <input type="text" />
       </label>
@@ -16,7 +16,7 @@ const HeroContainer = () => {
       </label>
     </form>
     <div className='budget-container'>Budget</div>
-        <form>
+        <form className='duration-wrapper'>
       <label>Start Date: 
         <input type="text" />
       </label>
