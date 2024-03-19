@@ -1,0 +1,32 @@
+.Itineraries-Page-Wrapper {
+    min-height: 100vh;
+    background-color: red;
+    padding-top: 80px;
+    display:grid;
+}
+.Itineraries-Wrapper {
+    background-color: aqua;
+    min-height: 45vh;
+    margin-bottom: 20px;
+    min-width: 90%;
+    margin-inline: auto;
+    text-align: center;
+    border-radius: 36px;
+
+}
+
+.Itineraries-Title {
+    font-size: 32px;
+    font-weight: bold;
+}
+.Itineraries-list {
+    background-color: blue;
+}
+/* <div className='Itineraries-Page-Wrapper'>
+<div className='Itineraries-Wrapper'>
+<h1 className='Iteneraries-Title'>Trip Itineraries</h1>
+<ul>
+  <li><Itinerary/></li>
+</ul>
+</div>
+</div> */
