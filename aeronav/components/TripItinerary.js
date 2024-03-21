@@ -16,26 +16,25 @@ function TripItinerary({Trip}) {
       <div className="activities-wrapper">
           <div className="activity-wrapper">10:30-11:30am: Flight to Colorado</div>
           <div className="activity-wrapper">11:30-12:30pm: Hotel Check-in</div>
-          <div className="activity-wrapper">10:30-11:30am: Flight to Colorado</div>
-          <div className="activity-wrapper">10:30-11:30am: Flight to Colorado</div>
+          <div className="activity-wrapper">02:30-03:30pm: Flight to Colorado</div>
+          <div className="activity-wrapper">05:30-07:30pm: Flight to Colorado</div>
       </div>
     </div>
     <div className="Day-Wrapper">
       <h2 className="Day-title">Day 2</h2>
       <div className="activities-wrapper">
           <div className="activity-wrapper">10:30-11:30am: Activity 1</div>
-          <div className="activity-wrapper">10:30-11:30am: Activity 2</div>
-          <div className="activity-wrapper">10:30-11:30am: Activity 3</div>
-          <div className="activity-wrapper">10:30-11:30am: Activity 4</div>
+          <div className="activity-wrapper">11:30-12:30pm: Activity 2</div>
+          <div className="activity-wrapper">04:30-05:30pm: Activity 3</div>
+          <div className="activity-wrapper">07:00-09:30am: Activity 4</div>
       </div>
     </div>
     <div className="Day-Wrapper">
       <h2 className="Day-title">Day 3</h2>
       <div className="activities-wrapper">
-          <div className="activity-wrapper">10:30-11:30am: Activity 1</div>
-          <div className="activity-wrapper">10:30-11:30am: Activity 2</div>
           <div className="activity-wrapper">10:30-11:30am: Hotel Checkout</div>
-          <div className="activity-wrapper">10:30-11:30am: Flight Home</div>
+          <div className="activity-wrapper">11:30-02:30pm: Activity 2</div>
+          <div className="activity-wrapper">05:30-06:30pm: Flight Home</div>
       </div>
     </div>
   </div>
