@@ -5,6 +5,7 @@ import '../styles/Survey.css'
 const HeroContainer = () => {
   return (
     <section className="main-page-container">
+      <div className='quote-container'><h1>Where travel dreams take flight.</h1></div>
       <div className='survey-container'>
         <h1>Survey</h1>
         <form className='location-wrapper'>
@@ -32,10 +33,9 @@ const HeroContainer = () => {
     </form>
 
       </div>
-      <div className='quote-container'><h1>Where travel dreams take flight.</h1></div>
-      <div className='ad-carousel-container'>
+      {/* <div className='ad-carousel-container'>
         Ad-Carousel-Container
-      </div>
+      </div> */}
 
   </section>
   )

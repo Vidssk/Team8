@@ -9,6 +9,8 @@
 .survey-container {
     color: var(--primaryTextColor);
     background-color: var(--secondaryBackColor);
+    border: 2px solid var(--secondaryTextColor); /* Add border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     min-height: 45vh;
     margin-bottom: 20px;
     max-width: 960px;
@@ -45,30 +47,31 @@
 
 .quote-container {
     /* font-size: 4rem; */
-    font-size: 50px;
+    font-size: 2rem;
     text-align: center;
-    background-color: var(--secondaryBackColor);
+    /* background-color: var(--secondaryBackColor); */
+    color: var(--primaryTextColor);
+    /* padding: 40px; Add padding for spacing */
+    margin: 20px auto; /* Center the container horizontally and add some margin */
+    border-radius: 10px; /* Add rounded corners */
 }
 
 .budget-container {
     font-size: 40px;
-    background-color: green;
-}
-.budget-container:hover {
-    font-size: 40px;
-    background-color: rgb(120, 103, 103);
+    /* background-color: green; */
 }
 .duration-wrapper {
-    background-color: rgb(8, 39, 235);
+    /* background-color: rgb(8, 39, 235); */
 }
 .location-wrapper {
     
-    background-color: rgb(8, 39, 235);
+    /* background-color: rgb(8, 39, 235); */
 }
 
 .button-wrapper {
     margin-top: 10px;
-    background-color: var(--primaryBackColor);
+    border-radius: 5px;
+    background-color: var(--thirdBackColor);
     color: black;
     width:100px;
 
