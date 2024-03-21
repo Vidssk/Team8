@@ -1,32 +1,87 @@
 .Itineraries-Page-Wrapper {
     min-height: 100vh;
-    background-color: red;
+    background-color: var(--primaryBackColor);
     padding-top: 80px;
     display:grid;
 }
+
 .Itineraries-Wrapper {
-    background-color: aqua;
+    /* background-color: aqua; */
     min-height: 45vh;
     margin-bottom: 20px;
     min-width: 90%;
     margin-inline: auto;
     text-align: center;
     border-radius: 36px;
-
+    
 }
 
 .Itineraries-Title {
+    color: var(--primaryTextColor);
     font-size: 32px;
     font-weight: bold;
+    animation-duration: 10ms;
 }
 .Itineraries-list {
-    background-color: blue;
+
+    /* background-color: var(--thirdBackColor); */
+    /* padding-top: 10px; */
+    padding:10px;
 }
-/* <div className='Itineraries-Page-Wrapper'>
-<div className='Itineraries-Wrapper'>
-<h1 className='Iteneraries-Title'>Trip Itineraries</h1>
-<ul>
-  <li><Itinerary/></li>
+.Itinerary-Link-Wrapper {
+    margin-bottom:20px;
+    background-color: var(--secondaryBackColor);
+    /* color: red; */
+    display: flex;
+    align-items: center;
+}
+.Itinerary-Link-Wrapper:hover {
+    background-color: var(--thirdBackColor);
+    transition-duration: 200ms;
+}
+.TripName {
+    /* background-color: yellow; */
+    display: flex;
+    width: fit-content;
+    /* padding: 10px; */
+    /* color: red; */
+    font-size: 25px;
+    align-items: center;
+}
+.start-end-Wrapper {
+    display: table-column;
+    padding: 10px;
+    /* background-color: red; */
+}
+.Location-Wrapper {
+    display: flexbox;
+    align-items: center;
+    /* background-color: red; */
+    
+    /* align-items: center; */
+}
+.Start-Location-Wrapper, .End-Location-Wrapper {
+    padding-inline: 10px;
+    width: 100%;
+    /* background-color: pink; */
+}
+
+
+.Trip-Itinerary-Wrapper {
+    background-color: red;
+    min-height: 100vh;
+    display: flex;
+    padding-top: 100px;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+/* 
+<div className='Itineraries-Page-Wrapper'>
+    <div className='Itineraries-Wrapper'>
+        <h1 className='Iteneraries-Title'>Trip Itineraries</h1>
+        <ul>
+            <li><Itinerary/></li>
 </ul>
 </div>
 </div> */

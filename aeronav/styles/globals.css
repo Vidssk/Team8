@@ -6,9 +6,9 @@
   margin: 0;
   padding: 0;
   /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
-  --primaryBackColor: whitesmoke;
-  --secondaryBackColor: rgb(168, 69, 69);
-  --thirdBackColor: #243874;
+  --primaryBackColor: #082467;
+  --secondaryBackColor: #A22C29;
+  --thirdBackColor: #E6E8E6;
   /* --backColor: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%); */
   --primaryTextColor: whitesmoke;
   --secondaryTextColor: black;
