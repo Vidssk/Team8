@@ -8,8 +8,8 @@ public class transportation extends rec {   //the time it takes to travel there 
     private int departure_length;
     private int return_length;
     
-    transportation(String name, LocalDateTime departure_date, LocalDateTime return_date, int departure_length, int return_length, String location, int price) {
-        super(name, departure_date, departure_length, location, price);
+    transportation(LocalDateTime departure_date, LocalDateTime return_date, int departure_length, int return_length, String location, int price) {
+        super("Travel", departure_date, departure_length, location, price);
         this.departure_date = departure_date;
         this.return_date = return_date;
         this.departure_length = departure_length;
@@ -32,21 +32,17 @@ public class transportation extends rec {   //the time it takes to travel there 
         return return_length;
     }
 
+    String to_string() {    //change to what's necessary
+        return "Departure Date & Time: " + departure_date
+            + "\nTravel Time: " + departure_length
+            + "\nReturn Date & Time: " + return_date
+            + "\nTravel Time: " + return_length;
+    }
+
     Boolean in_time(LocalDateTime date_time) {    //returns true if date_time is between arrival time and leaving time
-        int start_day = departure_date.getDayOfYear();
-        int start_hour = departure_date.getHour();
-        int start_min = departure_date.getMinute();
-        int start = (start_day * 24 + start_hour) * 60 + start_min + departure_length;  //exact minute should arrive on trip
-
-        int end_day = return_date.getDayOfYear();
-        int end_hour = return_date.getHour();
-        int end_min = return_date.getMinute();
-        int end = (end_day * 24 + end_hour) * 60 + end_min; //exact minute to return from trip
-
-        int cur_day = date_time.getDayOfYear();
-        int cur_hour = date_time.getHour();
-        int cur_min = date_time.getMinute();
-        int cur = (cur_day * 24 + cur_hour) * 60 + cur_min; //exact minute of the year at specified time
+        int start = to_minutes(departure_date) + departure_length;  //exact minute should arrive on trip
+        int end = to_minutes(return_date); //exact minute to return from trip
+        int cur = to_minutes(date_time); //exact minute of the year at specified time
 
         return start < cur && cur < end;
     }

@@ -43,4 +43,22 @@ public class rec {
             + "\nDate & Time: " + date_time
             + "\nPrice: " + price;
     }
+
+    protected int to_minutes(LocalDateTime date_time) {
+        return (date_time.getDayOfYear() * 24 + date_time.getHour()) * 60 + date_time.getMinute();
+    }
+
+    int to_minutes() {
+        return (date_time.getDayOfYear() * 24 + date_time.getHour()) * 60 + date_time.getMinute();
+    }
+
+    Boolean overlap(rec recommendation) {   //returns true if current rec overlaps with supplied one
+        int a_start = to_minutes(date_time);
+        int a_end = to_minutes(date_time) + length;
+
+        int b_start = to_minutes(recommendation.get_date_time());
+        int b_end = to_minutes(recommendation.get_date_time()) + recommendation.get_length();
+        
+        return a_end > b_start || a_start < b_end;
+    }
 }
