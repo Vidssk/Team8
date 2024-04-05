@@ -23,6 +23,10 @@ public class packager {
         recs.add(recommendation);
     }
 
+    int size() {
+        return recs.size();
+    }
+
     Boolean check_validity() {  //returns false if any of the times overlap or not within time of trip
         for(int i=0;i<recs.size();i++)
             for(int j=i+1;j<recs.size();j++)
