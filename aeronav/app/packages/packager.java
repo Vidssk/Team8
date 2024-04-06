@@ -2,7 +2,7 @@ package app.packages;
 
 import java.util.ArrayList;
 
-public class packager {
+public class packager { //turns recs into travel_packages
     private ArrayList<rec> recs;
     private transportation trans;
 
@@ -12,7 +12,7 @@ public class packager {
     }
 
     rec[] get_recs() {
-        return (rec[]) recs.toArray();
+        return recs.toArray(new rec[recs.size()]);
     }
 
     transportation get_transportation() {

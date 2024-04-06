@@ -9,9 +9,9 @@ public class rec {
     private String location;
     private int price;    //in cents
 
-    rec(String name, LocalDateTime date_date, int length, String location, int price) {
+    rec(String name, LocalDateTime date_time, int length, String location, int price) {
         this.name = name;
-        this.date_time = date_date;
+        this.date_time = date_time;
         this.length = length;
         this.location = location;
         this.price = price;

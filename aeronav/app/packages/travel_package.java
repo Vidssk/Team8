@@ -17,7 +17,7 @@ public class travel_package {
     }
 
     rec[] get_recs() {
-        return (rec[]) recs.toArray();
+        return recs.toArray(new rec[recs.size()]);
     }
 
     private void sort_by_time() {

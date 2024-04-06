@@ -2,7 +2,7 @@ package app.packages;
 
 import java.util.ArrayList;
 
-public class reciever {
+public class reciever { //recieves info from queries
     ArrayList<query> sent_queries;
     ArrayList<query> accepted_queries;
 
@@ -21,11 +21,11 @@ public class reciever {
     }
 
     query[] get_sent_queries() {
-        return (query[]) sent_queries.toArray();
+        return sent_queries.toArray(new query[sent_queries.size()]);
     }
 
     query[] get_accepted_queries() {
-        return (query[]) accepted_queries.toArray();
+        return accepted_queries.toArray(new query[accepted_queries.size()]);
     }
 
     void clear_sent_queries() { //only use when accepted_queries is still in use
