@@ -43,8 +43,8 @@ public class generator_runner {
         else
             System.out.print("Invalid: ");
         
-        travel_package tp = pack.export();
-        
-        System.out.println(tp.toString());
+        travel_package tp = pack.export();  //exports to chosen travel_package
+
+        System.out.println(tp.to_string());
     }
 }
