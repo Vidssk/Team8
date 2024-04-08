@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">AeroNavMobile</string>
+    <string name="quote">Where to Next</string>
+    <string name="company_name">AeroNav</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="Already">Already a user? Login.</string>
+    <string name="nav_survey">Survey</string>
+    <string name="nav_itineraries">Itineraries</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_logout">Logout</string>
+    <string name="nav_login">Login</string>
+    <string name="nav_github">GitHub Repository</string>
 </resources>
