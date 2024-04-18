@@ -7,5 +7,5 @@
     android:layout_height="match_parent"
     android:background="@color/blue"
     tools:context=".ItineraryActivity">
-
+<!--This is what an individual activity should look like-->
 </androidx.constraintlayout.widget.ConstraintLayout>

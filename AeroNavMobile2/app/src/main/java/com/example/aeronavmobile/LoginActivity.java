@@ -1,3 +1,4 @@
+// Java Code for Login Page
 package com.example.aeronavmobile;
 
 import android.content.Intent;
@@ -43,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = findViewById(R.id.login_button);
         signupRedirectText = findViewById(R.id.loginRedirectText);
 
+        // Java Code For Login in Button to check email and password.
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

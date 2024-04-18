@@ -1,3 +1,4 @@
+// Java Code for Main activity
 package com.example.aeronavmobile;
 
 import android.os.Bundle;

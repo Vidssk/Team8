@@ -1,6 +1,8 @@
 package com.example.aeronavmobile;
 import java.time.LocalDate;
 import java.time.Month;
+
+//Code to Generate Package
 public class generage_package {
 
         public static void main(String args[]) {
@@ -24,25 +26,25 @@ public class generage_package {
 
             //API stuff happens
 
-            reciever recieve = new reciever();
-
-            //for(query item: returned queries)
-            recieve.add_query(new query() /*item*/);
-
-            recieve.accept_query(0);    //this will accept the 1 query input rn
-
-            packager pack = new packager(trans);
-
-            for(query item: recieve.get_accepted_queries())
-                pack.add_rec(item.to_rec());
-
-            if(pack.check_validity())
-                System.out.print("Valid: ");
-            else
-                System.out.print("Invalid: ");
-
-            travel_package tp = pack.export();  //exports to chosen travel_package
-
-            System.out.println(tp.to_string());
+//            reciever recieve = new reciever();
+//
+//            //for(query item: returned queries)
+//            recieve.add_query(new query() /*item*/);
+//
+//            recieve.accept_query(0);    //this will accept the 1 query input rn
+//
+//            packager pack = new packager(trans);
+//
+//            for(query item: recieve.get_accepted_queries())
+//                pack.add_rec(item.to_rec());
+//
+//            if(pack.check_validity())
+//                System.out.print("Valid: ");
+//            else
+//                System.out.print("Invalid: ");
+//
+//            travel_package tp = pack.export();  //exports to chosen travel_package
+//
+//            System.out.println(tp.to_string());
         }
 }
