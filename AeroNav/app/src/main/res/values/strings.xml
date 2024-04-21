@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AeroNav</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="not_yet_registered_sign_up">Not yet registered? Sign Up</string>
+    <string name="already_registered_login">Already Registered? Login.</string>
+    <string name="register">Register</string>
+</resources>

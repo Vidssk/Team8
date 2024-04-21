@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "587392979008",
+    "project_id": "aeronavmobile",
+    "storage_bucket": "aeronavmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587392979008:android:ed767dd2d1bdb3832f4fa5",
+        "android_client_info": {
+          "package_name": "com.example.aeronav"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGSbNITIqZCHBFSaB3SRUHLFduRIRQqM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587392979008:android:e31b28de5e38a77e2f4fa5",
+        "android_client_info": {
+          "package_name": "com.example.aeronavmobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGSbNITIqZCHBFSaB3SRUHLFduRIRQqM0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
