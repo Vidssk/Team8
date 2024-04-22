@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_icon"
+            android:title="@string/trip_tailor" />
+        <item
+            android:id="@+id/nav_itineraries"
+            android:icon="@drawable/itineraries_icon"
+            android:title="@string/itineraries" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about_icon"
+            android:title="@string/about_aeronav" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="@string/profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_login"
+                    android:icon="@drawable/login_icon"
+                    android:title="@string/login" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/logout_icon"
+                    android:title="@string/logout"/>
+            </menu>
+        </item>
+
+    </group>
+</menu>
