@@ -7,4 +7,15 @@
     <string name="not_yet_registered_sign_up">Not yet registered? Sign Up</string>
     <string name="already_registered_login">Already Registered? Login.</string>
     <string name="register">Register</string>
+    <string name="trip_tailor">Trip Tailor</string>
+    <string name="logout">Logout</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="itineraries">Itineraries</string>
+    <string name="profile">Profile</string>
+    <string name="about_aeronav">About AeroNav</string>
+    <string name="https_github_com_vidssk_team8">https://github.com/Vidssk/Team8</string>
+    <string name="chart_your_course_seize_the_adventure">Chart your course, seize the adventure.</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="menu_icon">menu icon</string>
 </resources>

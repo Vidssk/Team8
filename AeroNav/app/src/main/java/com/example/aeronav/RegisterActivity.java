@@ -30,6 +30,16 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText signupEmail, signupPassword;
     private FirebaseAuth auth;
 
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = auth.getCurrentUser();
+        if(currentUser != null){
+            startActivity(new Intent(getApplicationContext(),SurveyActivity.class));
+            finish();
+        }
+    }
+    //Load Register Page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,12 +50,14 @@ public class RegisterActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //Initialize Variables
         auth = FirebaseAuth.getInstance();
         Button signupButton = findViewById(R.id.btn_signup);
         signupEmail = findViewById(R.id.email);
         signupPassword = findViewById(R.id.password);
         TextView loginRedirectText = findViewById(R.id.registerRedirectText);
 
+        //Button Listener Functions
         signupButton.setOnClickListener(v -> {
             String email = signupEmail.getText().toString().trim();
             String pass = String.valueOf(signupPassword.getText());
