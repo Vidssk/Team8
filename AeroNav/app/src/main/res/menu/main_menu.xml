@@ -4,7 +4,7 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/home_icon"
-            android:title="@string/trip_tailor" />
+            android:title="@string/plan_a_trip" />
         <item
             android:id="@+id/nav_itineraries"
             android:icon="@drawable/itineraries_icon"
@@ -16,9 +16,9 @@
 
     </group>
 
-    <group android:checkableBehavior="single">
         <item android:title="@string/profile">
             <menu>
+                <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_login"
                     android:icon="@drawable/login_icon"
@@ -27,8 +27,8 @@
                     android:id="@+id/nav_logout"
                     android:icon="@drawable/logout_icon"
                     android:title="@string/logout"/>
+                </group>
             </menu>
         </item>
 
-    </group>
 </menu>

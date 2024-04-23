@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
-        android:text="@string/chart_your_course_seize_the_adventure"
+        android:text="@string/planning_adventures"
         android:textSize="14sp" />
 
     <TextView
@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
         android:text="@string/https_github_com_vidssk_team8"
-        android:textSize="14sp"
+        android:textSize="12sp"
         android:paddingBottom="10dp" />
 
 </LinearLayout>

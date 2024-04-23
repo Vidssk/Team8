@@ -1,5 +1,6 @@
 package com.example.aeronav;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -11,51 +12,61 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends MainActivity {
 
     //Declare variables
+
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ActionBarDrawerToggle drawerToggle;
+    Toolbar toolbar;
     private FirebaseAuth auth;
     private EditText loginEmail, loginPassword;
 
-    //On start Login check
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = auth.getCurrentUser();
-//        if(currentUser != null){
-//            startActivity(new Intent(getApplicationContext(),SurveyActivity.class));
-//            finish();
-//        }
-//    }
+
     //View Login Page
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawer_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        //Set variables
+        //Authentication Hooks
         auth = FirebaseAuth.getInstance();
         loginEmail = findViewById(R.id.email);
         loginPassword = findViewById(R.id.password);
         Button loginButton = findViewById(R.id.btn_login);
         TextView signupRedirectText = findViewById(R.id.loginRedirectText);
+
+
+        // Navigation Hooks
+        toolbar = findViewById(R.id.toolbar);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+
+        //Navbar Setup
+        NavigationSetup();
+
+        AuthenticationCheck();
 
         //Log-in Button Listener Functions
         signupRedirectText.setOnClickListener(new View.OnClickListener() {
@@ -101,5 +112,25 @@ public class LoginActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void NavigationSetup() {
+        navigationView.setNavigationItemSelectedListener(this);
+        setSupportActionBar(toolbar);
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
+    }
+
+    private void AuthenticationCheck() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
+        if (user != null) {
+            startActivity(new Intent(getApplicationContext(),SurveyActivity.class));
+            Toast.makeText(this, "Already Logged in", Toast.LENGTH_SHORT).show();
+            finish();
+        }
     }
 }

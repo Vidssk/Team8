@@ -11,13 +11,17 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -25,10 +29,14 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Objects;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends MainActivity {
     TextInputEditText editTextEmail, editTextPassword;
     private EditText signupEmail, signupPassword;
     private FirebaseAuth auth;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    ActionBarDrawerToggle drawerToggle;
+    Toolbar toolbar;
 
     public void onStart() {
         super.onStart();
@@ -45,17 +53,26 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_register);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawer_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        //Initialize Variables
+        //Authorization Hooks
         auth = FirebaseAuth.getInstance();
         Button signupButton = findViewById(R.id.btn_signup);
         signupEmail = findViewById(R.id.email);
         signupPassword = findViewById(R.id.password);
         TextView loginRedirectText = findViewById(R.id.registerRedirectText);
+
+        // Navigation Hooks
+        toolbar = findViewById(R.id.toolbar);
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
+        //Toolbar toggle functionality
+        NavigationSetup();
 
         //Button Listener Functions
         signupButton.setOnClickListener(v -> {
@@ -77,5 +94,14 @@ public class RegisterActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void NavigationSetup() {
+        setSupportActionBar(toolbar);
+        navigationView.bringToFront();
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
     }
 }

@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:layout_margin="15dp"
-    android:padding="15dp"
+    tools:openDrawer="start"
     tools:context=".LoginActivity">
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        android:id="@+id/nav_view"
+        android:layout_gravity="start"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main"
+        android:orientation="vertical"
+        android:gravity="center">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -51,6 +75,7 @@
         android:id="@+id/loginRedirectText"
         android:text="@string/not_yet_registered_sign_up"
         android:padding="8dp" />
+    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
