@@ -35,8 +35,7 @@
             android:id="@+id/main"
             android:orientation="vertical"
             android:gravity="center">
-            <!--            Above is Layout for Navigation do not change.-->
-            <!-- Create Custom Layout Underneath-->
+            <!--            Above is Layout for Navigation do not change. Customize Bellow -->
             <TextView
                 android:id="@+id/user_details"
                 android:layout_width="match_parent"
@@ -45,4 +44,3 @@
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
-

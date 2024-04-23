@@ -9,38 +9,51 @@
     android:gravity="center"
     tools:openDrawer="start"
     tools:context=".ItineraryActivity">
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu"
-        android:id="@+id/nav_view"
         android:layout_gravity="start"
-        />
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
+
         <include
             android:id="@+id/toolbar"
-            layout="@layout/toolbar"
-            />
-
+            layout="@layout/toolbar" />
 
         <LinearLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/main"
             android:orientation="vertical"
             android:gravity="center">
-<!--            Above is Layout for Navigation do not change-->
+
+            <!-- User Details -->
             <TextView
                 android:id="@+id/user_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hello_world"/>
+                android:text="@string/hello_world" />
+
+            <!-- Itinerary List -->
+            <ListView
+                android:id="@+id/itinerary_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Add Activity Button -->
+            <Button
+                android:id="@+id/btn_add_itinerary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_to_itineraries" />
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
-

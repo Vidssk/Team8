@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class FlightActivity extends MainActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    ActionBarDrawerToggle drawerToggle;
+//    ActionBarDrawerToggle drawerToggle;
     Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

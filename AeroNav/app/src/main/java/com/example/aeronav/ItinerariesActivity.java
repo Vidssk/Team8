@@ -2,6 +2,9 @@ package com.example.aeronav;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -21,15 +24,15 @@ public class ItinerariesActivity extends MainActivity {
     //Navigation Variable Declarations
     DrawerLayout drawerLayout;
     NavigationView navigationView;
-    ActionBarDrawerToggle drawerToggle;
     Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_itineraries);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.drawer_layout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -38,11 +41,23 @@ public class ItinerariesActivity extends MainActivity {
         toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
+        Button btn_newItinerary = findViewById(R.id.btn_addItinerary);
 
         //Navbar Setup
         NavigationSetup();
         //Authentication check
         AuthenticationCheck();
+
+        //Load Packages from Database or File
+        //Load Packages
+        btn_newItinerary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                addButton();
+                startActivity(new Intent(getApplicationContext(),SurveyActivity.class));
+                finish();
+            }
+        });
     }
 
     private void AuthenticationCheck() {
@@ -64,4 +79,15 @@ public class ItinerariesActivity extends MainActivity {
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener((NavigationView.OnNavigationItemSelectedListener) this);
     }
+    //this function will load packages
+    public void LoadPackages(){
+
+    }
+//    public void addButton(){
+//        LinearLayout layout = (LinearLayout) findViewById(R.id.main);
+////        newbtn = new Button(this);
+////        String temp = "new Button";
+////        newbtn.setText(temp);
+////        layout.addView(newbtn);
+//    }
 }

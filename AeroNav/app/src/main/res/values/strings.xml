@@ -68,6 +68,18 @@
     <string name="start_location">start location</string>
     <string name="end_location">End Location</string>
     <string name="generate_package">Generate Package</string>
-    <string name="start_city">start City</string>
+    <string name="start_city">Start City</string>
     <string name="end_city">End City</string>
+    <string name="new_itinerary">New Itinerary</string>
+    <string name="flight">Flight</string>
+    <string name="activity">Activity</string>
+    <string name="hotel">Hotel</string>
+    <string name="package_2">Package 2</string>
+    <string name="package_1">Package 1</string>
+    <string name="package_5">Package 5</string>
+    <string name="package_3">Package 3</string>
+    <string name="package_4">Package 4</string>
+    <string name="add_to_itineraries">Add To Itineraries</string>
+    <string name="about">About AeroNav</string>
+    <string name="about_description">Leave planning to us. Just enjoy the adventures that await.</string>
 </resources>

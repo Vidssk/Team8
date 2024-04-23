@@ -2,6 +2,8 @@ package com.example.aeronav;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +25,7 @@ public class ItineraryActivity extends MainActivity {
     ActionBarDrawerToggle drawerToggle;
     Toolbar toolbar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +40,23 @@ public class ItineraryActivity extends MainActivity {
         toolbar = findViewById(R.id.toolbar);
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
+        Button btn_addItinerary = findViewById(R.id.btn_add_itinerary);
+        btn_addItinerary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), ItinerariesActivity.class);
+                // Add Data to Either Database or create a new file with the Itinerary Data.
+                startActivity(intent);
+                finish();
+            }
+        });
 
         //Navbar Setup
         NavigationSetup();
 
         AuthenticationCheck();
+
+
     }
     //Checks if there is a current user logged In
     private void AuthenticationCheck() {

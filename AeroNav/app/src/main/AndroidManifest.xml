@@ -15,6 +15,9 @@
         android:theme="@style/Theme.AeroNav"
         tools:targetApi="31">
         <activity
+            android:name=".PackagesActivity"
+            android:exported="false" />
+        <activity
             android:name=".FlightActivity"
             android:exported="false" />
         <activity

@@ -9,37 +9,65 @@
     android:gravity="center"
     tools:openDrawer="start"
     tools:context=".AboutActivity">
+
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:headerLayout="@layout/header"
-        app:menu="@menu/main_menu"
-        android:id="@+id/nav_view"
         android:layout_gravity="start"
-        />
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-
         android:layout_height="match_parent">
+
         <include
             android:id="@+id/toolbar"
-            layout="@layout/toolbar"
-            />
-
+            layout="@layout/toolbar" />
 
         <LinearLayout
+            android:id="@+id/main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/main"
             android:orientation="vertical"
             android:gravity="center">
+            <ImageView
+                android:paddingTop="70dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/aeronav_icon"
+                android:contentDescription="@string/app_name"/>
+
+            <!-- Title -->
             <TextView
-                android:id="@+id/user_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hello_world"/>
+                android:text="@string/about"
+                android:layout_gravity="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/https_github_com_vidssk_team8"
+                android:layout_gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Description -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_description"
+                android:textSize="18sp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
-

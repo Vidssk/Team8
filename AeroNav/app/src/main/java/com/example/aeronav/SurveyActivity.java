@@ -92,7 +92,7 @@ public class SurveyActivity extends MainActivity {
                 } else if (endLocation.isEmpty() || endLocation.equals("End Date")) {
                     endLoc.setError("Ending location cannot be empty.");
                 } else {
-                    generatePackage(startLocation,endLocation,startDate,endDate);
+                    PassSurveyData(startLocation,endLocation,startDate,endDate);
                 }
             }
         });
@@ -134,11 +134,17 @@ public class SurveyActivity extends MainActivity {
         }, 2022, 1, 15);
         dialog.show();
     }
-    // Where we generate a package and switch pages to that package.
-    public void generatePackage(String startLocation,String endLocation, String startDate, String endDate){
-        String temp = '['+startLocation+"-"+endLocation+"]"+"["+startDate + "-"+ endDate + "]";
-        textView.setText(temp);
-
+    // Moved Generate Package to PackagesActivity.java
+    //intent functions could be useful. Might be one to transport full package of what you generate
+    // Function Passes survey data to the packages page.
+    public void PassSurveyData(String startLocation,String endLocation, String startDate, String endDate){
+        Intent intent = new Intent(SurveyActivity.this, PackagesActivity.class);
+        intent.putExtra("keyStartLoc", startLocation);
+        intent.putExtra("keyEndLoc", endLocation);
+        intent.putExtra("keyStartDate",startDate);
+        intent.putExtra("keyEndDate",endDate);
+        startActivity(intent);
+        finish();
     }
 
 }
