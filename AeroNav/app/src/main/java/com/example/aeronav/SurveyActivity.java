@@ -92,7 +92,7 @@ public class SurveyActivity extends MainActivity implements OnMapReadyCallback {
                     try {
                         addressList = geocoder.getFromLocationName(location,1);
                     } catch (IOException e) {
-                        e.printStackTrace();;
+                        e.printStackTrace();
                     }
                     assert addressList != null;
                     Address address = addressList.get(0);
@@ -121,7 +121,7 @@ public class SurveyActivity extends MainActivity implements OnMapReadyCallback {
                     try {
                         addressList = geocoder.getFromLocationName(location,1);
                     } catch (IOException e) {
-                        e.printStackTrace();;
+                        e.printStackTrace();
                     }
                     assert addressList != null;
                     Address address = addressList.get(0);

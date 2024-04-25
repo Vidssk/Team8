@@ -61,15 +61,7 @@
                     android:backgroundTint="@color/button_background_color"
                     android:text="@string/end_date"
                     android:layout_marginEnd="5dp"/>
-                <EditText
-                    android:inputType="textPostalAddress"
-                    android:id="@+id/startLocationButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:backgroundTint="@color/button_background_color"
-                    android:layout_marginEnd="5dp"
-                    android:hint="@string/start_city"
-                    android:autofillHints="postalAddress" />
+
                 <android.widget.SearchView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
