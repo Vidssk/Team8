@@ -48,6 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
+
 >
                     <LinearLayout
                         android:id="@+id/package1"
@@ -56,34 +57,19 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@color/third_color">
+                        android:elevation="5dp"
+                        android:background="@color/secondary_color">
                         <!--                    Want to replace with ImageView to see photos as backgrounds-->
                         <TextView
                             android:id="@+id/destination1"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
+                            android:gravity="center"
                             android:background="@color/secondary_color"
                             android:textColor="@color/white"
                             android:text="@string/package_1"/>
-                        <TextView
-                            android:id="@+id/flight1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/flight"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/activity1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/activity"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/hotel1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/hotel"
-                            android:padding="10dp"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/package2"
@@ -92,34 +78,18 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@color/third_color">
+                        android:background="@color/secondary_color">
                         <!--                    Want to replace with ImageView to see photos as backgrounds-->
                         <TextView
                             android:id="@+id/destination2"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
+                            android:gravity="center"
                             android:background="@color/secondary_color"
                             android:textColor="@color/white"
+                            android:elevation="5dp"
                             android:text="@string/package_2"/>
-                        <TextView
-                            android:id="@+id/flight2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/flight"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/activity2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/activity"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/hotel2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/hotel"
-                            android:padding="10dp"/>
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/package3"
@@ -128,34 +98,19 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
-                        android:background="@color/third_color">
+                        android:elevation="5dp"
+                        android:background="@color/secondary_color">
                         <!--                    Want to replace with ImageView to see photos as backgrounds-->
                         <TextView
                             android:id="@+id/destination3"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
+                            android:gravity="center"
                             android:background="@color/secondary_color"
                             android:textColor="@color/white"
                             android:text="@string/package_3"/>
-                        <TextView
-                            android:id="@+id/flight3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/flight"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/activity3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/activity"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/hotel3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/hotel"
-                            android:padding="10dp"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/package4"
@@ -164,34 +119,19 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
+                        android:elevation="5dp"
                         android:background="@color/third_color">
                         <!--                    Want to replace with ImageView to see photos as backgrounds-->
                         <TextView
                             android:id="@+id/destination4"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
+                            android:gravity="center"
                             android:background="@color/secondary_color"
                             android:textColor="@color/white"
                             android:text="@string/package_4"/>
-                        <TextView
-                            android:id="@+id/flight4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/flight"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/activity4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/activity"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/hotel4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/hotel"
-                            android:padding="10dp"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:id="@+id/package5"
@@ -200,34 +140,19 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="10dp"
+                        android:elevation="5dp"
                         android:background="@color/third_color">
                         <!--                    Want to replace with ImageView to see photos as backgrounds-->
                         <TextView
                             android:id="@+id/destination5"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
+                            android:gravity="center"
                             android:background="@color/secondary_color"
                             android:textColor="@color/white"
                             android:text="@string/package_5"/>
-                        <TextView
-                            android:id="@+id/flight5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/flight"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/activity5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/activity"
-                            android:padding="10dp"/>
-                        <TextView
-                            android:id="@+id/hotel5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/hotel"
-                            android:padding="10dp"/>
+
                     </LinearLayout>
 
                 </LinearLayout>

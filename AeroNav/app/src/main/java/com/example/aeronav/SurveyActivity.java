@@ -6,6 +6,7 @@ import android.location.Address;
 import android.location.Geocoder;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -156,8 +157,8 @@ public class SurveyActivity extends MainActivity implements OnMapReadyCallback {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String startDate = btn_startDate.getText().toString().trim();
-                String endDate = btn_endDate.getText().toString().trim();
+                String startDate = btn_startDate.getText().toString();
+                String endDate = btn_endDate.getText().toString();
 //                    <string name="start_date">Start Date</string>
 //    <string name="end_date">End Date</string>
                 if(startLocation.isEmpty() || startDate.equals("Start Date") || endLocation.isEmpty() || endDate.equals("End Date")){
@@ -193,18 +194,18 @@ public class SurveyActivity extends MainActivity implements OnMapReadyCallback {
 
     //Function for start and end Dates
     private void openDialog(Button btn){
-        DatePickerDialog dialog = new DatePickerDialog(this,new DatePickerDialog.OnDateSetListener() {
+        DatePickerDialog dialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                String temp = String.valueOf(year)+"."+String.valueOf(month)+"."+String.valueOf(dayOfMonth);
-//                textView.setText(temp);
+                // Increment month by 1 to represent the correct month
+                month += 1;
+                String temp = month + "/" + dayOfMonth + "/" + year;
                 btn.setText(temp);
-
             }
-
         }, 2022, 1, 15);
         dialog.show();
     }
+
     // Moved Generate Package to PackagesActivity.java
     //intent functions could be useful. Might be one to transport full package of what you generate
     // Function Passes survey data to the packages page.

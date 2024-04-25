@@ -26,34 +26,44 @@
             android:id="@+id/toolbar"
             layout="@layout/toolbar" />
 
-        <LinearLayout
-            android:id="@+id/main"
+        <!-- Scrollable content -->
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:id="@+id/mainScroll"
+            android:layout_marginTop="?attr/actionBarSize">
 
-            <!-- User Details -->
-            <TextView
-                android:id="@+id/user_details"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/hello_world" />
-
-            <!-- Itinerary List -->
-            <ListView
-                android:id="@+id/itinerary_list"
+            <!-- Linear layout to hold scrollable content -->
+            <LinearLayout
+                android:id="@+id/main"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <!-- Add Activity Button -->
-            <Button
-                android:id="@+id/btn_add_itinerary"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/add_to_itineraries" />
+                android:orientation="vertical"
+                android:gravity="center">
 
-        </LinearLayout>
+                <!-- User Details -->
+                <TextView
+                    android:id="@+id/user_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="@string/hello_world" />
+
+                <!-- Itinerary List -->
+                <!--                <ListView-->
+                <!--                    android:id="@+id/itinerary_list"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="0dp"-->
+                <!--                    android:layout_weight="1" />-->
+
+                <!-- Add Activity Button -->
+                <Button
+                    android:id="@+id/btn_add_itinerary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add_to_itineraries" />
+
+            </LinearLayout>
+        </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>
