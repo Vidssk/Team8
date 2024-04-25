@@ -70,16 +70,33 @@
                     android:layout_marginEnd="5dp"
                     android:hint="@string/start_city"
                     android:autofillHints="postalAddress" />
-                <EditText
-                    android:inputType="textPostalAddress"
-                    android:id="@+id/endLocationButton"
+                <android.widget.SearchView
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:backgroundTint="@color/button_background_color"
-                    android:hint="@string/end_city"
-                    android:layout_marginEnd="5dp"
-                    android:autofillHints="postalAddress"
-                    />
+                    android:layout_height="wrap_content"
+                    android:id="@+id/map1Search"
+                    android:queryHint="Search Start Destination"
+                    android:background="@drawable/bg_search_view"
+                    android:iconifiedByDefault="false"
+                    android:elevation="5dp"/>
+                <fragment
+                    android:id="@+id/startMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+                <android.widget.SearchView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/map2Search"
+                    android:background="@drawable/bg_search_view"
+                    android:queryHint="Search End Destination"
+                    android:iconifiedByDefault="false"
+                    android:elevation="5dp"/>
+                <fragment
+                    android:id="@+id/endMap"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
                 <Button
                     android:id="@+id/submitPackage"
                     android:layout_width="match_parent"

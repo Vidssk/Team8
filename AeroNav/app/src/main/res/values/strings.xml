@@ -1,4 +1,7 @@
 <resources>
+
+<!--   API Keys -->
+    <string name="maps_key">AIzaSyA9da45_yMM7IEL84kqSFR0Sxir5o6btuM</string>
     <string name="app_name">AeroNav</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>

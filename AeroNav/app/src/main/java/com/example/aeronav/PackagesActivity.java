@@ -47,10 +47,12 @@ public class PackagesActivity extends MainActivity {
         AuthenticationCheck();
 
         //Get Survey Information
-        String startLocation = getIntent().getStringExtra("keyStartLoc");
-        String endLocation = getIntent().getStringExtra("keyEndLoc");
+        String startLocation = getIntent().getStringExtra("keyStartLocation");
+        String endLocation = getIntent().getStringExtra("keyEndLocation");
         String startDate = getIntent().getStringExtra("keyStartDate");
         String endDate = getIntent().getStringExtra("keyEndDate");
+
+        //Also have access to latitude and longitude.
 
 
         String trip = startLocation +"-"+ endLocation;
